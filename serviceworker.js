@@ -6,7 +6,9 @@ const assets = [
 "https://pyscript.net/alpha/pyscript.css", 
 "https://pyscript.net/alpha/pyscript.js",
 "src/main.py",
-"src/main.js"
+"src/main.js",
+"images/icon-192x192.png",
+"images/icon-512x512.png",
 ]
 
 
