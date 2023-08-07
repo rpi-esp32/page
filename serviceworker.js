@@ -3,12 +3,9 @@ var staticCacheName = "pwa";
 const assets = [
 "/",
 "/index.html", 
-"https://pyscript.net/alpha/pyscript.css", 
-"https://pyscript.net/alpha/pyscript.js",
-"src/main.py",
-"src/main.js",
+"images/favicon.ico",
 "images/icon-192x192.png",
-"images/icon-512x512.png",
+"images/icon-512x512.png"
 ]
 
 
