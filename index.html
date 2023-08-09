@@ -13,6 +13,7 @@
     <title>PWA Tutorial</title>
     <link rel="icon" type="images/x-icon" href="images/favicon.ico" />
 	<link rel="style" href="style.css" />
+	<link rel="script" type="application/js" defer href="script.js" />
     <!-- Meta Tags required for
 	Progressive Web App -->
     <meta name="apple-mobile-web-app-status-bar" content="#aa7700" />
@@ -27,13 +28,18 @@
   </head>
 
   <body>
-    <h1 style="color: green;">GeeksforGeeks</h1>
+	<header>
+	    <h1 style="color: green;">GeeksforGeeks</h1>	
+	</header>
 
-    <p style="background-color: yellowgreen;">
-      This is a simple tutorial for creating a PWA application.
-    </p>
-
-    <p>visual studio on web</p>
+	<div class="card">
+		<p style="background-color: yellowgreen;">
+			This is a simple tutorial for creating a PWA application.
+		  </p>
+	  
+		  <p>visual studio on web</p>
+	  
+	</div>
 
     <script>
       window.addEventListener("load", () => {
