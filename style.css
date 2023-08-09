@@ -4,7 +4,7 @@ body {
 
 .container {
     display: grid;
-    grid-gap: 2 rem;
+    grid-row-gap: 2 rem;
     grid-template-columns: repeat(auto-fill, minmax(180px, 300px)) ;
     background-color: dimgray;
 }
