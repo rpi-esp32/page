@@ -19,3 +19,10 @@ https://joaoapps.com/join/api/
 Service Worker Update :
 https://whatwebcando.today/articles/handling-service-worker-updates/
 
+https://whatwebcando.today/articles/use-chrome-dev-tools-switches/
+
+
+
+
+Geolocation to Promises :
+https://whatwebcando.today/articles/use-geolocation-api-promises/
