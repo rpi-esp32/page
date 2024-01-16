@@ -33,5 +33,9 @@ https://whatwebcando.today/articles/use-geolocation-api-promises/
 keyboard shortcut:
 ctl + shift + G = message box
 cmd + enter = commit & push
+ctl + G  (+ enter) = to desired line number 
+
+option + cmd + I = developer tool in chrome
+
 
 

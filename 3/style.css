@@ -1,0 +1,18 @@
+body {
+    background-color: powderblue;
+  }
+
+.container {
+    display: grid;
+    grid-row-gap: 2 rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 300px)) ;
+    background-color: dimgray;
+}
+
+p {
+    color: blue;
+}
+
+.card {
+    background-color: green;
+}
