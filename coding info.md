@@ -26,3 +26,11 @@ https://whatwebcando.today/articles/use-chrome-dev-tools-switches/
 
 Geolocation to Promises :
 https://whatwebcando.today/articles/use-geolocation-api-promises/
+
+
+
+keyboard shortcut:
+ctl + shift + G = message box
+cmd + enter = commit & push
+
+
