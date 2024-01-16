@@ -1,1 +1,1 @@
-console.log("gone wild");
+document.write("hello from javascript");
