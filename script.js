@@ -71,6 +71,7 @@ function success(position) {
   let time = position.timestamp;
   const date = new Date(time);
   console.log(lat + "   " + lon);
+  console.log(date);
   a.textContent = lat;
   b.textContent = lon;
   c.textContent = acc;
