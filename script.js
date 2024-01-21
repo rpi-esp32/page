@@ -47,9 +47,9 @@ function handler(event) {
   ABS = event.absolute;
   WEBKIT = event.webkitCompassHeading??"failed compass";
 
-  e.textContent = LR;
-  f.textContent = FB;
-  g.textContent = DIR;
+  e.textContent = LR.toFixed(2);
+  f.textContent = FB.toFixed(2);
+  g.textContent = DIR.toFixed(2);
   // h.textContent = ABS;
   
 }
