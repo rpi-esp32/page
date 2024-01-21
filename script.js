@@ -47,11 +47,11 @@ function handler(event) {
   ABS = event.absolute;
   WEBKIT = event.webkitCompassHeading??"failed compass";
 
-  c.textContent = LR;
-  d.textContent = FB;
-  e.textContent = DIR;
-  h.textContent = ABS;
-  g.textContent = WEBKIT;
+  e.textContent = LR;
+  f.textContent = FB;
+  g.textContent = DIR;
+  // h.textContent = ABS;
+  
 }
 
 /******** GPS ****************/
@@ -72,7 +72,8 @@ function success(position) {
   console.log(lat + "   " + lon);
   a.textContent = lat;
   b.textContent = lon;
-  c.textContent = time;
+  c.textContent = acc;
+  d.textContent = time;
 }
 
 function failed() {
