@@ -69,13 +69,13 @@ function success(position) {
   let alt = position.coords.altitude;
   let acc = position.coords.accuracy;
   let time = position.timestamp;
-  const date = new Date(time);
+  const day = new Date(time);
   console.log(lat + "   " + lon);
-  console.log(date);
+  console.log(day);
   a.textContent = lat;
   b.textContent = lon;
   c.textContent = acc;
-  d.textContent = date;
+  d.textContent = day;
   document.querySelector("#content button").classList.remove("active");
 }
 
