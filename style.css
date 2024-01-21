@@ -61,7 +61,7 @@ html {
   & .page div.item.value {
     color: red;
     border: black 1px solid;
-    width: 300px;
+    min-width: calc(100vw - 150px);
   }
 
   & button {
