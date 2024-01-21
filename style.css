@@ -49,4 +49,12 @@ html {
     display: block;
     border: green solid 3px;
   }
+
+  & .page .item.label {
+    color: green;
+  }
+
+  & .page .item.value {
+    color: red
+  }
 }
