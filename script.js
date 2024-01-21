@@ -29,7 +29,7 @@ let e = document.getElementById("value35");
 let f = document.getElementById("value36");
 
 
-if ("DeviceOrientationEvent" in window) {
+if ("DeviceOrientationAbsoluteEvent" in window) {
   window.addEventListener("deviceorientation", handler, false);
   f.textContent = "event registered.";
 } else {
