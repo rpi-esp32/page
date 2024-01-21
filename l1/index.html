@@ -5,24 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="images/x-icon" href="/image/favicon.ico" />
     <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js" type="text/javascript"></script>
+
     <title>CSS layout nesting</title>
   </head>
   <body>
-    <div id="mainlayout">
-      <div id="header" class="header">occupy the top</div>
-      <div id="navbar">
-        <ul>
-          <li><a href="#content">CONTENT</a></li>
-          <li><a href="#content">CONTENT 2</a></li>
-        </ul>
+    <nav id="nav">
+      <div id="goto01" onclick="go(event)" targetID="page01">GPS</div>
+      <div id="goto02" onclick="go(event)" targetID="page02">GOLF</div>
+      <div id="goto03" onclick="go(event)" targetID="page03">Message</div>
+    </nav>
+    <div id="band"></div>
+    <div id="content">
+      <div id="page01" class="page show">
+        <div id="label11" class="item label show">11</div>
+        <div id="value11" class="item value show">testing something</div>
+        <div id="label12" class="item label show">12</div>
+        <div id="value12" class="item value show">testing something</div>
       </div>
-      <div id="content">
-        <div id="div1" class="container show">
-          <h1 class="item head1 show">heading</h1>
-          <p class="item p1 show">testing something</p>
-        </div>
+
+      <div id="page02" class="page show">
+        <div id="label21" class="item label show">21</div>
+        <div id="value21" class="item value show">testing something</div>
+        <div id="label22" class="item label show">22</div>
+        <div id="value22" class="item value show">testing something</div>
+      </div>
+
+      <div id="page03" class="page show">
+        <div id="label31" class="item label show">31</div>
+        <div id="value31" class="item value show">testing something</div>
+        <div id="label32" class="item label show">32</div>
+        <div id="value32" class="item value show">testing something</div>
+        <div id="value33" class="item value show">testing something</div>
+        <div id="value34" class="item value show">testing something</div>
       </div>
     </div>
+
+    <script src="/script.js" type="text/javascript"></script>
   </body>
 </html>

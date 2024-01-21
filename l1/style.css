@@ -1,92 +1,52 @@
 html {
   width: 100vw;
   height: 100vh;
-  /* margin: auto; */
   background-color: aqua;
 }
 
-body {
-  margin: 0rem;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-  display: none;
+#band {
+  height: 40px;
+  background-color: bisque;
+}
 
-  margin: 5rem;
-  padding: 2rem;
-  border-style: solid;
-  border-width: 2rem;
-  border-color: blue;
+#nav {
+  /* LAYOUT */
+  position: fixed;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  justify-content: left;
 
-  background-color: yellow;
-  width: max-content;
-
-  & .item {
-    display: none;
-    background-color: green;
-    width: fit-content;
-    margin: 0rem;
-    padding: 4rem;
-    border-style: solid;
-    border-width: 2rem;
-    border-color: red;
+  & div {
+    /* STYLE */
     font-style: italic;
+    font-weight: bold;
+    padding: 4px;
+    margin: 1px;
+    border: red solid 2px;
     color: red;
+    background-color: grey;
   }
 
-  & .item.show {
-    display: block;
-  }
-
-  &.show {
-    display: block;
+  & div.active {
+    background-color: yellow;
   }
 }
 
-#mainlayout {
-  display: grid;
-  column-gap: 5px;
-  grid-template-rows: repeat(1fr, 4);
-  grid-template-areas: main main main main main;
-
-  & #header {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    text-align: center;
-
-    font-size: 2rem;
-    background-color: yellow;
-    margin: 0rem;
-    height: 100%;
+#content {
+  & .page {
+    display: none;
   }
 
-  & #navbar {
-    grid-row-start: 2;
-    grid-column-start: 1;
-    grid-column-end: 6;
-
-    /* height: 5rem;
-    background-color: gray; */
-
-    position: fixed;
-
-    & ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-
-      & li {
-        display: inline;
-        padding: 8px;
-        background-color: green;
-      }
-    }
-  }
-
-  & #content {
-    grid-row-start: 3;
-    grid-column-start: 1;
-    grid-column-end: 6;
+  & .page.show {
+    display: block;
+    border: green solid 3px;
   }
 }
