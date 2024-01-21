@@ -56,12 +56,14 @@ html {
     display: inline-block;
     min-width: 150px;
     border: green solid 2px;
+    padding-left: 2px;
   }
 
   & .page div.item.value {
     color: red;
     border: black 1px solid;
     min-width: fit-content;
+    padding-left: 2px;
   }
 
   & button {
