@@ -80,7 +80,8 @@ html {
 
   & input {
     border: red solid 2px;
-    overflow-wrap: normal;
-    align-content: ;
+    word-wrap: break-word;
+    word-break: break-all;
+  
   }
 }
