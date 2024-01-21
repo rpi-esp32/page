@@ -15,7 +15,7 @@ function go(event) {
   page.classList.add("show");
 }
 
-/*  *********** ORIENTATION ***************/
+/*   GLOBALS   */
 let a = document.getElementById("value31");
 let b = document.getElementById("value32");
 let c = document.getElementById("value33");
@@ -25,6 +25,13 @@ let f = document.getElementById("value36");
 let g = document.getElementById("value37");
 let h = document.getElementById("value38");
 
+let LR;
+let FB;
+let DIR;
+let ABS;
+let WEBKIT;
+
+/*  *********** ORIENTATION ***************/
 if ("DeviceOrientationEvent" in window) {
   window.addEventListener("deviceorientation", handler, false);
   // f.textContent = "event registered.";
@@ -34,17 +41,17 @@ if ("DeviceOrientationEvent" in window) {
 
 function handler(event) {
   console.log("handler is action");
-  let LR = event.gamma;
-  let FB = event.beta;
-  let dir = event.alpha;
-  let abs = event.absolute;
-  let webkit = event.webkitCompassHeading??"failed compass";
+  LR = event.gamma;
+  FB = event.beta;
+  DIR = event.alpha;
+  ABS = event.absolute;
+  WEBKIT = event.webkitCompassHeading??"failed compass";
 
   c.textContent = LR;
   d.textContent = FB;
-  e.textContent = dir;
-  h.textContent = abs;
-  g.textContent = webkit;
+  e.textContent = DIR;
+  h.textContent = ABS;
+  g.textContent = WEBKIT;
 }
 
 /********
