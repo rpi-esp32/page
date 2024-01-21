@@ -26,7 +26,7 @@ let e = document.getElementById("value35");
 let f = document.getElementById("value36");
 
 if ("DeviceOrientationEvent" in window) {
-  window.addEventListener("deviceorientationabsolute", handler, false);
+  window.addEventListener("deviceorientation", handler, false);
   f.textContent = "event registered.";
 } else {
   a.textContent = "API not supported ...";
