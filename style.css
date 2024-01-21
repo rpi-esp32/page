@@ -57,7 +57,8 @@ html {
   }
 
   & .page div.item.value {
-    color: red
+    color: red;
+    border: black 1px solid;
   }
 
   & button {
