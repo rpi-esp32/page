@@ -46,7 +46,8 @@ html {
   }
 
   & .page.show {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     border: green solid 3px;
   }
 
@@ -54,11 +55,13 @@ html {
     color: green;
     display: inline-block;
     min-width: 150px;
+    border: green solid 2px;
   }
 
   & .page div.item.value {
     color: red;
     border: black 1px solid;
+    width: 300px;
   }
 
   & button {
