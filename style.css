@@ -52,7 +52,7 @@ html {
 
   & .page .item.label {
     color: green;
-    display: inblock;
+    display: inline-block;
     min-width: 150px;
   }
 
