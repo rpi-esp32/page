@@ -54,14 +54,10 @@ function handler(event) {
   g.textContent = WEBKIT;
 }
 
-/********
- GPS ****
-*********
-***/
+/******** GPS ****************/
 navigator.permissions.query({ name: "geolocation" }).then((permit) => {
   if (permit.state === "denied") {
     console.log("permission denied");
-    return;
   } else {
     navigator.geolocation.getCurrentPosition(success, failed, {enableHighAccuracy: true,});
   }
@@ -76,14 +72,15 @@ function success(position) {
   console.log(lat + "   " + lon);
   a.textContent = lat;
   b.textContent = lon;
+  c.textContent = time;
 }
 
 function failed() {
-  a.textContent = "failed GPS";
+  a.textContent = "cannot get GPS";
 }
 
 function getPosition() {
-  navigator.geolocation.getCurrentPosition(result, failed, {enableHighAccuracy: true,});
+  navigator.geolocation.getCurrentPosition(success, failed, {enableHighAccuracy: true,});
 }
 
 
