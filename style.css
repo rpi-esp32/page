@@ -65,7 +65,9 @@ html {
   }
 
   & button {
-    font-size: 3rem;
+    font-size: 2rem;
+    border: solid 3px red;
+    border-radius: 8px;
   }
 
   & button:hover {
