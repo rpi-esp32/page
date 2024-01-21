@@ -58,11 +58,11 @@ navigator.permissions.query({ name: "geolocation" }).then((result) => {
     console.log("permission denied");
     return;
   } else {
-    navigator.geolocation.getCurrentPosition(result);
+    navigator.geolocation.getCurrentPosition(res);
   }
 });
 
-function result(position) {
+function res(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   console.log(lat + "   " + lon);
@@ -71,5 +71,5 @@ function result(position) {
 }
 
 function getPosition() {
-  navigator.geolocation.getCurrentPosition(result);
+  navigator.geolocation.getCurrentPosition(res);
 }
