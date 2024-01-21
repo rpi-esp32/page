@@ -24,6 +24,8 @@ let c = document.getElementById("value33");
 let d = document.getElementById("value34");
 let e = document.getElementById("value35");
 let f = document.getElementById("value36");
+let g = document.getElementById("value37");
+let h = document.getElementById("value38");
 
 if ("DeviceOrientationEvent" in window) {
   window.addEventListener("deviceorientation", handler, false);
@@ -37,10 +39,12 @@ function handler(event) {
   let LR = event.gamma;
   let FB = event.beta;
   let dir = event.alpha;
+  let abs = event.absolute;
 
   c.textContent = LR;
   d.textContent = FB;
   e.textContent = dir;
+  h.textContent = abs;
 }
 
 /********
