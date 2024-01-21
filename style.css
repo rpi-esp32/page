@@ -63,4 +63,8 @@ html {
   & button {
     font-size: 2rem;
   }
+
+  & button:hover {
+    background-color: blue;
+  }
 }
