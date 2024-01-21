@@ -58,7 +58,7 @@ navigator.permissions.query({ name: "geolocation" }).then((result) => {
     console.log("permission denied");
     return;
   } else {
-    navigator.geolocation.getCurrentPosition(res);
+    navigator.geolocation.getCurrentPosition(result, failed, {enableHighAccuracy: true,});
   }
 });
 
@@ -70,6 +70,10 @@ function res(position) {
   b.textContent = lon;
 }
 
+function failed() {
+  a.textContent = "failed GPS";
+}
+
 function getPosition() {
-  navigator.geolocation.getCurrentPosition(res);
+  navigator.geolocation.getCurrentPosition(result, failed, {enableHighAccuracy: true,});
 }
