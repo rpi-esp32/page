@@ -18,12 +18,14 @@ let a = document.getElementById("value31");
 let b = document.getElementById("value32");
 let c = document.getElementById("value33");
 let d = document.getElementById("value34");
+let e = document.getElementById("value35");
+let f = document.getElementById("value36");
 // console.log(typeof Accelerometer === "function");
 // a.textContent = "DeviceOrientationEvent" in window;
 
 if ("DeviceOrientationEvent" in window) {
   window.addEventListener("deviceorientation", handler, false);
-  d.textContent = "event registered.";
+  f.textContent = "event registered.";
 } else {
   a.textContent = "API not supported ...";
 }
@@ -34,9 +36,9 @@ function handler(event) {
   let FB = event.beta;
   let dir = event.alpha;
 
-  a.textContent = LR;
-  b.textContent = FB;
-  c.textContent = dir;
+  c.textContent = LR;
+  d.textContent = FB;
+  e.textContent = dir;
 }
 
 // // const sensor = new Accelerometer();
@@ -54,11 +56,11 @@ navigator.permissions.query({ name: "geolocation" }).then((result) => {
     console.log("permission denied");
     return;
   } else {
-    console.log("ok");
     navigator.geolocation.getCurrentPosition(res);
   }
 });
 
 function res(position) {
-  console.log(position.coords.latitude);
+  a.textContent = position.coords.latitude;
+  b.textContent = position.coords.longitude;
 }
