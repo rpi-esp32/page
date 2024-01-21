@@ -14,14 +14,20 @@ function go(event) {
   page.classList.add("show");
 }
 
+
+
+
+/*
+ORIENTATION **************
+*/
+
 let a = document.getElementById("value31");
 let b = document.getElementById("value32");
 let c = document.getElementById("value33");
 let d = document.getElementById("value34");
 let e = document.getElementById("value35");
 let f = document.getElementById("value36");
-// console.log(typeof Accelerometer === "function");
-// a.textContent = "DeviceOrientationEvent" in window;
+
 
 if ("DeviceOrientationEvent" in window) {
   window.addEventListener("deviceorientation", handler, false);
