@@ -40,7 +40,7 @@ function handler(event) {
   let FB = event.beta;
   let dir = event.alpha;
   let abs = event.absolute;
-  let webkit = event.webkitCompassHeading;
+  let webkit = event.webkitCompassHeading??"failed experiment";
 
   c.textContent = LR;
   d.textContent = FB;
