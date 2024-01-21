@@ -14,9 +14,6 @@ function go(event) {
   page.classList.add("show");
 }
 
-
-
-
 /*
 ORIENTATION **************
 */
@@ -28,9 +25,8 @@ let d = document.getElementById("value34");
 let e = document.getElementById("value35");
 let f = document.getElementById("value36");
 
-
 if ("DeviceOrientationEvent" in window) {
-  window.addEventListener("deviceorientation", handler, false);
+  window.addEventListener("deviceorientationabsolute", handler, false);
   f.textContent = "event registered.";
 } else {
   a.textContent = "API not supported ...";
@@ -46,9 +42,6 @@ function handler(event) {
   d.textContent = FB;
   e.textContent = dir;
 }
-
-
-
 
 /********
  GPS ****
