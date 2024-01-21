@@ -70,7 +70,7 @@ html {
     border-radius: 8px;
   }
 
-  & button:hover {
+  & button.active {
     background-color: blue;
   }
 }

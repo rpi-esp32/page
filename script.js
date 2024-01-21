@@ -74,6 +74,7 @@ function success(position) {
   b.textContent = lon;
   c.textContent = acc;
   d.textContent = time;
+  document.querySelector(#content button.active).classList.remove("active");
 }
 
 function failed() {
