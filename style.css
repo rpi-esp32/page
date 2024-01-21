@@ -32,11 +32,11 @@ html {
     margin: 1px;
     border: red solid 2px;
     color: red;
-    background-color: grey;
+    background-color: yellow;
   }
 
   & div.active {
-    background-color: yellow;
+    background-color: blue;
   }
 }
 
