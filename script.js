@@ -77,3 +77,14 @@ function failed() {
 function getPosition() {
   navigator.geolocation.getCurrentPosition(result, failed, {enableHighAccuracy: true,});
 }
+
+
+
+
+
+
+
+
+
+
+
