@@ -52,6 +52,8 @@ html {
 
   & .page .item.label {
     color: green;
+    display: inblock;
+    min-width: 150px;
   }
 
   & .page .item.value {
