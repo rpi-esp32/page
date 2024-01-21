@@ -59,4 +59,8 @@ html {
   & .page div.item.value {
     color: red
   }
+
+  & button {
+    font-size: 2rem;
+  }
 }
