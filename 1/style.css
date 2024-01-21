@@ -1,18 +1,52 @@
-body {
-    background-color: powderblue;
+html {
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#band {
+  height: 40px;
+  background-color: bisque;
+}
+
+#nav {
+  /* LAYOUT */
+  position: fixed;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  justify-content: left;
+
+  & div {
+    /* STYLE */
+    font-style: italic;
+    font-weight: bold;
+    padding: 4px;
+    margin: 1px;
+    border: red solid 2px;
+    color: red;
+    background-color: grey;
   }
 
-.container {
-    display: grid;
-    grid-row-gap: 2 rem;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 300px)) ;
-    background-color: dimgray;
+  & div.active {
+    background-color: yellow;
+  }
 }
 
-p {
-    color: blue;
-}
+#content {
+  & .page {
+    display: none;
+  }
 
-.card {
-    background-color: green;
+  & .page.show {
+    display: block;
+    border: green solid 3px;
+  }
 }
