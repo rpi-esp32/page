@@ -37,6 +37,7 @@ html {
 
   & div.active {
     background-color: blue;
+    border-width: 3px;
   }
 }
 
