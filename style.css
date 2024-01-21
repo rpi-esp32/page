@@ -77,4 +77,8 @@ html {
   & button.active {
     background-color: blue;
   }
+
+  & input {
+    border: red solid 2px;
+  }
 }
