@@ -40,11 +40,13 @@ function handler(event) {
   let FB = event.beta;
   let dir = event.alpha;
   let abs = event.absolute;
+  let webkit = event.webkitCompassHeading;
 
   c.textContent = LR;
   d.textContent = FB;
   e.textContent = dir;
   h.textContent = abs;
+  g.textContent = webkit;
 }
 
 /********
