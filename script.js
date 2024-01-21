@@ -41,16 +41,13 @@ function handler(event) {
   e.textContent = dir;
 }
 
-// // const sensor = new Accelerometer();
-// window.addEventListener("devicemotion", handler);
-// // sensor.start();
 
-// function handler(acceleration, targetID) {
-//   // var info, exz = "[X, Y, Z]";
-//   var x = acceleration.x;
-//   a.textContent = x;
-// }
 
+
+/********
+ GPS ****
+*********
+***/
 navigator.permissions.query({ name: "geolocation" }).then((result) => {
   if (result.state === "denied") {
     console.log("permission denied");
@@ -61,6 +58,9 @@ navigator.permissions.query({ name: "geolocation" }).then((result) => {
 });
 
 function res(position) {
-  a.textContent = position.coords.latitude;
-  b.textContent = position.coords.longitude;
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  console.log(lat + "   " + lon);
+  a.textContent = lat;
+  b.textContent = lon;
 }
