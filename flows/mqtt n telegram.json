@@ -1,0 +1,320 @@
+[
+  {
+      "id": "b79e127500080522",
+      "type": "tab",
+      "label": "Flow 1",
+      "disabled": false,
+      "info": "",
+      "env": []
+  },
+  {
+      "id": "52b730b396851230",
+      "type": "mqtt-broker",
+      "name": "",
+      "broker": "io.adafruit.com",
+      "port": "1883",
+      "clientid": "aio_ABnN67255Xk32a9IBEdS9sgGra1z",
+      "autoConnect": true,
+      "usetls": false,
+      "protocolVersion": "4",
+      "keepalive": "60",
+      "cleansession": true,
+      "autoUnsubscribe": true,
+      "birthTopic": "",
+      "birthQos": "0",
+      "birthRetain": "false",
+      "birthPayload": "",
+      "birthMsg": {},
+      "closeTopic": "",
+      "closeQos": "0",
+      "closeRetain": "false",
+      "closePayload": "",
+      "closeMsg": {},
+      "willTopic": "",
+      "willQos": "0",
+      "willRetain": "false",
+      "willPayload": "",
+      "willMsg": {},
+      "userProps": "",
+      "sessionExpiry": ""
+  },
+  {
+      "id": "57801d23e173f057",
+      "type": "telegram bot",
+      "botname": "Betty",
+      "usernames": "",
+      "chatids": "",
+      "baseapiurl": "",
+      "updatemode": "polling",
+      "pollinterval": "300",
+      "usesocks": false,
+      "sockshost": "",
+      "socksprotocol": "socks5",
+      "socksport": "6667",
+      "socksusername": "anonymous",
+      "sockspassword": "",
+      "bothost": "",
+      "botpath": "",
+      "localbotport": "8443",
+      "publicbotport": "8443",
+      "privatekey": "",
+      "certificate": "",
+      "useselfsignedcertificate": false,
+      "sslterminated": false,
+      "verboselogging": false
+  },
+  {
+      "id": "be3c2ebcb0feef1d",
+      "type": "mqtt in",
+      "z": "b79e127500080522",
+      "name": "",
+      "topic": "mccwong/feeds/reply",
+      "qos": "2",
+      "datatype": "auto-detect",
+      "broker": "52b730b396851230",
+      "nl": false,
+      "rap": true,
+      "rh": 0,
+      "inputs": 0,
+      "x": 240,
+      "y": 280,
+      "wires": [
+          [
+              "9eea1eda097c9b83"
+          ]
+      ]
+  },
+  {
+      "id": "dbd825d4dc8dc05a",
+      "type": "mqtt out",
+      "z": "b79e127500080522",
+      "name": "reply",
+      "topic": "mccwong/feeds/reply",
+      "qos": "2",
+      "retain": "true",
+      "respTopic": "",
+      "contentType": "",
+      "userProps": "",
+      "correl": "",
+      "expiry": "",
+      "broker": "52b730b396851230",
+      "x": 590,
+      "y": 460,
+      "wires": []
+  },
+  {
+      "id": "bed0e2ab06a1359a",
+      "type": "telegram receiver",
+      "z": "b79e127500080522",
+      "name": "Betty",
+      "bot": "57801d23e173f057",
+      "saveDataDir": "",
+      "filterCommands": false,
+      "x": 150,
+      "y": 200,
+      "wires": [
+          [
+              "9eea1eda097c9b83"
+          ],
+          [
+              "9eea1eda097c9b83"
+          ]
+      ]
+  },
+  {
+      "id": "4bc6631e4a55df02",
+      "type": "telegram sender",
+      "z": "b79e127500080522",
+      "name": "Betty to Note13",
+      "bot": "57801d23e173f057",
+      "haserroroutput": false,
+      "outputs": 1,
+      "x": 340,
+      "y": 680,
+      "wires": [
+          [
+              "f2261d51d1a5bd97"
+          ]
+      ]
+  },
+  {
+      "id": "9eea1eda097c9b83",
+      "type": "debug",
+      "z": "b79e127500080522",
+      "name": "debug 1",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "false",
+      "statusVal": "",
+      "statusType": "auto",
+      "x": 540,
+      "y": 280,
+      "wires": []
+  },
+  {
+      "id": "b92df2d0f64264e8",
+      "type": "inject",
+      "z": "b79e127500080522",
+      "name": "",
+      "props": [
+          {
+              "p": "payload"
+          },
+          {
+              "p": "topic",
+              "vt": "str"
+          }
+      ],
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "x": 180,
+      "y": 460,
+      "wires": [
+          [
+              "dbd825d4dc8dc05a"
+          ]
+      ]
+  },
+  {
+      "id": "bc88997e745ab5f3",
+      "type": "mqtt in",
+      "z": "b79e127500080522",
+      "name": "",
+      "topic": "mccwong/feeds/json",
+      "qos": "2",
+      "datatype": "auto-detect",
+      "broker": "52b730b396851230",
+      "nl": false,
+      "rap": true,
+      "rh": 0,
+      "inputs": 0,
+      "x": 260,
+      "y": 360,
+      "wires": [
+          [
+              "97e43abe67878637"
+          ]
+      ]
+  },
+  {
+      "id": "97e43abe67878637",
+      "type": "debug",
+      "z": "b79e127500080522",
+      "name": "debug 2",
+      "active": true,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "false",
+      "statusVal": "",
+      "statusType": "auto",
+      "x": 560,
+      "y": 360,
+      "wires": []
+  },
+  {
+      "id": "2b6ca3e09fd6f096",
+      "type": "mqtt out",
+      "z": "b79e127500080522",
+      "name": "reply",
+      "topic": "mccwong/feeds/json",
+      "qos": "2",
+      "retain": "true",
+      "respTopic": "",
+      "contentType": "",
+      "userProps": "",
+      "correl": "",
+      "expiry": "",
+      "broker": "52b730b396851230",
+      "x": 570,
+      "y": 560,
+      "wires": []
+  },
+  {
+      "id": "2aea894be20a1a5d",
+      "type": "inject",
+      "z": "b79e127500080522",
+      "name": "",
+      "props": [
+          {
+              "p": "payload"
+          },
+          {
+              "p": "topic",
+              "vt": "str"
+          }
+      ],
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "topic": "",
+      "payload": "",
+      "payloadType": "date",
+      "x": 160,
+      "y": 560,
+      "wires": [
+          [
+              "2b6ca3e09fd6f096"
+          ]
+      ]
+  },
+  {
+      "id": "b5e5223c9603adaa",
+      "type": "inject",
+      "z": "b79e127500080522",
+      "name": "",
+      "props": [
+          {
+              "p": "payload.content",
+              "v": "",
+              "vt": "date"
+          },
+          {
+              "p": "payload.type",
+              "v": "message",
+              "vt": "str"
+          },
+          {
+              "p": "payload.chatId",
+              "v": "6324343731",
+              "vt": "num"
+          }
+      ],
+      "repeat": "",
+      "crontab": "",
+      "once": false,
+      "onceDelay": 0.1,
+      "topic": "",
+      "x": 130,
+      "y": 680,
+      "wires": [
+          [
+              "4bc6631e4a55df02"
+          ]
+      ]
+  },
+  {
+      "id": "f2261d51d1a5bd97",
+      "type": "debug",
+      "z": "b79e127500080522",
+      "name": "debug 3",
+      "active": false,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "false",
+      "statusVal": "",
+      "statusType": "auto",
+      "x": 600,
+      "y": 680,
+      "wires": []
+  }
+]
